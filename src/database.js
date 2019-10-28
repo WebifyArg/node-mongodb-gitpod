@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://webify:webify@cluster0-2g3nl.azure.mongodb.net/test?retryWrites=true&w=majority', {
+const database = process.env.database;
+
+mongoose.connect(database, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
